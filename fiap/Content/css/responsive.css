@@ -1,0 +1,639 @@
+﻿
+
+@media (max-width: 1024px) {
+    #main-menu a.item {
+        width: 112px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    div[ui-view="body"] {
+        overflow: hidden;
+    }
+
+    #header .navbar-header {
+        float: left;
+    }
+
+        #header .navbar-header .navbar-brand {
+            max-width: 66%;
+        }
+
+    #header .nav.toolbar.navbar-right > li {
+        display: initial;
+    }
+
+        #header .nav.toolbar.navbar-right > li.dropdown {
+            display: initial;
+        }
+
+    #header .search {
+        display: none;
+    }
+
+    #wrapper .content-header {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #wrapper [id$="-content"] > .p-h-32,
+    #wrapper [id$="-content"] > .p-32 {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    #wrapper form h1 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    #wrapper [class*="mark-"] {
+        border-top-width: 4px !important;
+    }
+
+    #main-menu {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        height: 125px;
+    }
+
+        #main-menu a.item {
+            width: 110px;
+        }
+
+
+        #main-menu #main-menu-venda-add {
+            float: none !important;
+            position: fixed;
+            right: 14px;
+            bottom: 64px;
+            width: 58px !important;
+            height: 58px;
+            border-radius: 50%;
+            padding: 4px 3px;
+            min-width: initial;
+            min-height: initial;
+            max-width: initial;
+        }
+
+        #main-menu::-webkit-scrollbar {
+            height: 12px;
+            background-color: $base-bg-color;
+            background-color: rgba(0,0,0,.1);
+        }
+
+        #main-menu::-webkit-scrollbar-thumb,
+        #main-menu::-webkit-scrollbar-thumb:hover,
+        #main-menu::-webkit-scrollbar-thumb:active {
+            background-color: $featured-bg-color;
+        }
+
+    #venda-add-content #main-menu .total {
+        width: 200px;
+    }
+
+    // #config-content .menu ul > li {
+        float: left;
+        width: 56px;
+    }
+
+    #config-content .menu ul > li {
+        float: left;
+        width: 33%;
+    }
+
+    // #config-content .menu ul > li > a > span {
+        display: none;
+    }
+
+    #config-content #tab-content {
+        clear: both;
+        width: 100%;
+    }
+
+    #config-content > form > div > div {
+        width: 100%;
+    }
+
+    #consulta-content .content .disponivel .media .media-left .material-icons {
+        font-size: 64px;
+    }
+
+    #consulta-content .content .disponivel .media .media-body .media-heading {
+        font-size: 24px;
+        color: #bbb;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    #consulta-content .content .disponivel .media .media-body div {
+        font-size: 14px;
+    }
+
+    #venda-add-content #main-menu .total {
+        float: left !important;
+        width: 322px;
+    }
+
+    // #venda-add-content #main-menu #totalDiv {
+        display: inline-block !important;
+        float: none !important;
+    }
+
+    #venda-add-content #main-menu #totalDiv {
+        display: inline-block !important;
+    }
+
+    #venda-add-content #main-menu .total > table > tfoot > tr > th:last-child {
+        font-size: 30px;
+        padding: 0 0 0 10px;
+        width: 100px
+    }
+
+    .fit-to-filter {
+        margin-right: inherit;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #main-menu {
+        max-height: 235px;
+        height: auto;
+    }
+
+    #wrapper [id$="-content"] > .p-h-32, #wrapper [id$="-content"] > .p-32 {
+        padding: 0 32px 200px 32px;
+    }
+
+    #venda-add-content #main-menu .btndesconto {
+        margin-left: 47%;
+    }
+
+    #venda-add-content #main-menu #totalDiv {
+        width: 100%;
+    }
+
+    #venda-add-content #main-menu #totalDiv {
+        width: 100%;
+    }
+
+    #venda-add-content #main-menu .total {
+        width: calc(100% - 110px);
+    }
+
+    .bg-modal .form {
+        width: 100%;
+    }
+
+    #login-content .form {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+    }
+
+    #consulta-content > div.p-h-32.p-v-16 > div:nth-child(2) > div > div > div:nth-child(1) > div.col-sm-6 {
+        width: 100% !important;
+    }
+
+    #consulta-content > div.p-h-32.p-v-16 > div:nth-child(2) > div > div > div:nth-child(1) > div.col-sm-2 {
+        width: 50% !important;
+    }
+
+    #consulta-content > div.p-h-32.p-v-16 > div:nth-child(2) > div > div > div:nth-child(1) > div.col-sm-4 {
+        width: 50% !important;
+    }
+
+    div[style*="min-width: 774px;"] {
+        min-width: initial !important;
+        max-width: initial !important;
+    }
+
+    #tab-content > div > div > div.col-sm-9 > div:nth-child(1) > div > div:nth-child(3) {
+        display: none;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+    #wrapper .wrapper .h-109 {
+        height: auto;
+        min-height: 109px;
+        margin-bottom: 30px;
+    }
+
+    #pagamento-conclusao .transportadora div.col-lg-4.p-t-32 {
+        padding: 0 0 32px 16px;
+    }
+}
+
+
+/* CELULARES E TELAS MENORES */
+@media (max-width: 767px) {
+
+    #login-content .form {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+    }
+
+    footer#main-menu::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    #header .navbar-header .navbar-brand {
+        max-width: calc(100% - 56px);
+        font-size: 15px;
+        padding: 0px;
+    }
+
+    #venda-add-content {
+        padding: 0 0 0 0;
+    }
+
+        #venda-add-content .content-header, #venda-add-content .content-header > div {
+            height: 168px;
+            position: static;
+            margin: 36px 0 0 0;
+        }
+
+            #venda-add-content .content-header > div {
+                padding: 12px;
+                padding: 7px 16px;
+            }
+
+            #venda-add-content .content-header div .icon, #venda-add-content .content-header div span {
+            }
+
+            #venda-add-content .content-header div .body {
+                margin-left: 0 !important;
+            }
+
+            #venda-add-content .content-header .input-group {
+                width: 100%;
+            }
+
+    #wrapper {
+        margin-bottom: 64px;
+    }
+
+        #wrapper [id$="-content"] > .p-h-32, #wrapper [id$="-content"] > .p-32 {
+            padding: 0 16px;
+        }
+
+    #venda-add-content #main-menu .btndesconto {
+        margin-left: 85%;
+    }
+
+    #venda-add-content #main-menu > div {
+        display: inline-block;
+    }
+
+    #config-content .menu ul > li {
+        float: left;
+        width: 16.66%;
+    }
+
+        #config-content .menu ul > li > a > span {
+            display: none;
+        }
+
+    #pagamento-conclusao .transportadora div.col-lg-4.p-t-32 {
+        padding: 0 0 32px 16px;
+    }
+
+    #venda-add-content .content .space-top {
+        clear: both;
+        height: 0;
+    }
+
+    #home-content .cover {
+        height: calc(100vh - 52px);
+    }
+
+    #main-menu a.item i, #main-menu a.item img {
+        margin: 7px 0;
+        height: 35px;
+        width: 35px;
+    }
+
+    #main-menu a.item {
+        height: 100%;
+        width: 40px;
+        vertical-align: top;
+        min-width: 62px;
+    }
+
+    .material-icons.md-48 {
+        font-size: 35px;
+    }
+
+    #main-menu a.item p {
+        display: none;
+    }
+
+    .navbar-brand *:not(big) {
+        display: none;
+    }
+
+    #venda-add-content #content {
+        padding: 0 16px 140px 16px;
+    }
+
+    #venda-add-content #totalDiv {
+        width: 100vw;
+    }
+
+        #venda-add-content #totalDiv .total {
+            width: 100vw;
+        }
+
+    #totalDiv a:last-of-type:not(.btndesconto) {
+        position: fixed;
+        right: 14px;
+        bottom: 134px;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+    #sidebar > .menu {
+        overflow: auto;
+        height: calc(100vh - 168px);
+    }
+
+    #venda-add-content .content .disponivel .media {
+        margin: 16px 56px 56px 56px;
+        color: #bbb;
+    }
+
+    #venda-add-content #content > div.row.disponivel.ng-scope > div > div > div.media-left.media-middle {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    #venda-add-content .content .disponivel .media .media-body .media-heading {
+        font-size: 33px;
+    }
+
+    #venda-add-content #pagamento .form .footer .total > table > tbody > tr > td {
+        height: 26px;
+        font-size: 14px;
+    }
+
+    #venda-add-content #pagamento .form .footer, .finishButton {
+        height: 215px;
+    }
+
+        #venda-add-content #pagamento .form .footer .total {
+            height: 215px;
+        }
+
+    .bg-modal .form .header {
+        font-size: 14px;
+    }
+
+    #venda-add-content #pagamento .form .footer button p, #venda-add-content #pagamento .form .footer a.item p {
+        display: none;
+    }
+
+    #venda-add-content #pagamento .form .footer a.item i {
+        margin: 86px 0;
+    }
+
+    form#pagamentoCondicaoPagamento > div {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -o-column-count: 1;
+        -ms-column-count: 1;
+        column-count: 1;
+    }
+
+    #venda-add-content #pagamento .form .footer .total > table {
+        width: 100%;
+        position: relative;
+    }
+
+        #venda-add-content #pagamento .form .footer .total > table > tfoot > tr > th:last-child {
+            font-size: 28px;
+            position: absolute;
+            right: 0;
+        }
+}
+
+/* MEDIA QUERIES | Particularidades para Tablet */
+
+@media (max-width: 1024px) and (max-height: 690px) {
+
+    .bg-modal .autorizacao {
+        margin: 0 auto;
+        top: 0;
+        width: 100vw;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+
+        .bg-modal .autorizacao .wrapper {
+            padding: 0 24px;
+        }
+
+        .bg-modal .autorizacao .logo .material-icons {
+            display: none;
+        }
+
+    .bg-modal > form > div.wrapper > .form-group.row {
+        margin: 0 15px 0 0 !important;
+        width: 25%;
+        float: left;
+    }
+
+    .bg-modal .autorizacao .header {
+        margin-top: 0 !important;
+    }
+
+
+    #login-content > div > div.logo {
+        display: none;
+    }
+
+    #login-content .form {
+        background-color: #fff;
+        color: #757575;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        padding: 35px 128px;
+        overflow-y: scroll;
+    }
+
+
+    #venda-add-content #main-menu {
+        max-height: 125px;
+    }
+
+    #venda-add-content #pagamento .form .wrapper {
+        height: 45vh !important;
+    }
+
+    #dashboard-content > div.container-fluid > div > div > div > div {
+        padding-bottom: 150px;
+    }
+
+    .conteudo {
+        padding-bottom: 150px;
+    }
+
+    .indicadores .m-b-8 {
+        width: 50%;
+    }
+
+    .indicadores .m-b-9 {
+        width: 33.33%;
+    }
+
+    #main-menu.configuracoes a.item {
+        width: 165px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    #wrapper {
+        margin: 0 !important;
+    }
+
+    div[id*="-detail"] > div.p-h-32 {
+        padding: 0 0 200px 0 !important;
+    }
+
+        div[id*="-detail"] > div.p-h-32 > div.col-sm-8 {
+            width: 83.33333333% !important;
+        }
+
+        div[id*="-detail"] > div.p-h-32,
+        div[id*="-detail"] > div.p-h-32 div[class*="col-sm-"] {
+            width: 100% !important;
+        }
+
+    div[id*="-detail"] div[class*="col-sm-"] label {
+        margin-top: 16px;
+    }
+
+
+    #main-menu #main-menu-venda-add {
+        bottom: 150px;
+    }
+
+    #wrapper > div > a + #main-menu #main-menu-venda-add {
+        bottom: 200px;
+    }
+
+
+    #main-menu-venda-add i {
+        margin: 1px 0 !important;
+    }
+
+    #main-menu-venda-add p {
+        display: none !important;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .card {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    #venda-add-content .content-header > div {
+        padding: 12px 12px;
+    }
+
+    #header .navbar-header .navbar-brand {
+        max-width: 100%;
+    }
+
+    #totalDiv {
+        width: 42%;
+    }
+
+    .bg-modal .form {
+        width: 95%;
+    }
+
+    .conteudo {
+        padding-bottom: 150px;
+    }
+
+    .indicadores .m-b-8 {
+        width: 50%;
+    }
+
+    .indicadores .m-b-9 {
+        width: 33.33%;
+    }
+
+    #nota-fiscal-content > div.p-32 > form > div:nth-child(1) > div > div.col-sm-5 {
+        width: 100%;
+    }
+    
+    #report-paper .table > tbody > tr > td,
+    #report-paper .table > tbody > tr > th,
+    #report-paper .table > tfoot > tr > th { white-space: nowrap; overflow: hidden; width: auto; text-overflow: ellipsis; font-size: 10px !important; vertical-align: middle !important; }
+    #pivot-table table td:first-child { display: none !important; }
+
+    #report-paper.fluxodecaixa table, #report-paper.fluxodecaixa table tr:last-child td { border-bottom: 1px solid #dddddd; border-bottom-color: #dddddd !important; }
+
+
+     /*div[id*="content"] { essa linha causando problema na impressão junto com chrome
+        display: none!important;
+    }*/
+
+    section#imprimir.imprimir {
+        display: block!important;
+    }
+    section#imprimir .table-condensed tbody {
+        min-height: 60px;
+        margin-bottom: 16px;
+    }
+
+    section#imprimir .table-condensed > tbody > tr,
+    section#imprimir .table-condensed > tbody > tr > td { line-height: 1 !important; }
+
+    section#imprimir .imprimirCabecalho div[class*="col-sm-"] {
+
+        float: left;
+        width: 50%!important;
+    }
+}
+
+
+@media (max-height: 300px) and (max-width: 1024px) {
+
+    #main-menu {
+        display: none;
+    }
+
+    #login-content .form .logo .material-icons {
+        display: none;
+    }
+
+    #venda-add-content #main-menu a.item:not(:last-child) {
+        display: none;
+    }
+}

@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<div class="">
+    <div class="space"></div>
+
+    <div class="p-h-32 p-v-16">
+        <form name="funcionarioForm" class="content funcionario__form" ng-submit="submit()">
+            <h1>Cadastro de funcionário</h1>
+            <div class="card p-8 funcionario__add__form_cad">
+                <div class="row">
+                    <div class="funcionario__form--content">
+                        <div>
+                            <div class="row">
+                                <div id="form" class="form-group col-sm-5">
+                                    <label class="control-label">Nome</label>
+                                    <input class="form-control input-nome form__input" ng-model="items.data.Nome" placeholder="Nome completo" required maxlength="100" />
+                                </div>
+                                <div id="form" class="form-group col-sm-2">
+                                    <label class="control-label">Nome Social</label>
+                                    <input class="form-control form__nome__social form__input" ng-model="items.data.Apelido" placeholder="Apelido" maxlength="100" />
+                                </div>
+                                <div id="form" class="form-group col-sm-2">
+                                    <label class="control-label">CPF</label>
+                                    <input class="form-control form__input" ng-model="items.data.CPF" placeholder="CPF" ng-class="{'input-error': !items.data.CPF}" required name="cpfDefault" clean="false" ng-blur="validaCpf(items.data.CPF);" ui-br-cpf-mask />
+                                </div>
+                                <div id="form" class="form-group col-sm-2">
+                                    <label class="control-label">Registro Geral RG</label>
+                                    <input class="form-control form__nome__social form__input" mask="99.999.999-9" ng-model="items.data.RG" placeholder="RG" required maxlength="19" numeric-only />
+                                </div>
+                            </div>
+                            <div class="row form-dados">
+                                <div class="form-group col-sm-3">
+                                    <div class="input-group">
+                                        <span id="icon-padding-left" class="input-group-addon"><i class="material-icons">email</i></span>
+                                        <input id="row_2--email" class="form-control" name="email" ng-model="items.data.Email" placeholder="e-mail" required maxlength="100" ng-blur="validateEmail(items.data.Email);" />
+                                    </div>
+                                </div>
+                                <div  class="form-group col-sm-2">
+                                    <div class="input-group">
+                                        <span id="icon-padding-left" class="input-group-addon"></span>
+                                        <input class="form-control" name="data_nascimento" mask="99/99/9999" ng-model="items.data.DT_Nascimento" required placeholder="Data nascimento" maxlength="20" />
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <div class="input-group">
+                                        <span id="icon-padding-left" class="input-group-addon"><i class="material-icons">phone_iphone</i></span>
+                                        <select class="form-control" required ng-model="items.data.Tipo_Cell" ng-options="i.Nome as i.Nome for i in items.cell"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input class="form-control" name="celularDDD" required ng-model="items.data.DDD_Cell" placeholder="DDD" maxlength="3" numbers-only />
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input class="form-control" name="celularNumero" required ng-model="items.data.Celular" placeholder="Número" maxlength="10" numbers-only />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h5 class="subtitle">Contatos adicíonais</h5>
+                                <div class="form-group col-sm-2">
+                                    <div class="input-group">
+                                        <span id="icon-padding-left" class="input-group-addon"><i class="material-icons">phone</i></span>
+                                        <select class="form-control" ng-model="items.data.Tipo_Tell" ng-options="i.Nome as i.Nome for i in items.auxiliar"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input class="form-control" name="telefoneDDD" ng-model="items.data.DDD_Tell" placeholder="DDD" maxlength="3" numbers-only />
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <input class="form-control" name="telefoneNumero" ng-model="items.data.Telefone" placeholder="Número" maxlength="10" numbers-only />
+                                </div>
+                            </div>
+
+                            <div class="row row__complementares">
+                                <h5 class="subtitle">Dados complementos</h5>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': campoInvalido('cep') }">
+                                    <label class="control-label">CEP</label>
+                                    <div class="input-group">
+                                        <input class="form-control form__input" name="cep" required ng-model="items.data.Endereco.Cep" ng-blur="getEndereco()" placeholder="CEP" maxlength="9" ui-br-cep-mask />
+                                        <div class="input-group-btn">
+                                            <a href="" class="btn btn-link" ng-click="getEndereco()">
+                                                <i class="material-icons">more</i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': campoInvalido('endereco') }">
+                                    <label class="control-label">Endereço</label>
+                                    <input class="form-control form__input" name="endereco" ng-model="items.data.Endereco.Endereco" ng-blur="validacaoFidelidadeEndereco(items.data.Endereco.Linha1)" required placeholder="Endereço" maxlength="90" />
+                                </div>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': campoInvalido('numero') }">
+                                    <label class="control-label">Número</label>
+                                    <input class="form-control form__input" name="numero" ng-model="items.data.Endereco.Numero" placeholder="Número" required maxlength="10" numbers-only />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">Complemento</label>
+                                    <input class="form-control form__input" name="complemento" ng-model="items.data.Endereco.Complemento" placeholder="Complemento" maxlength="20" />
+                                </div>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': campoInvalido('bairro') }">
+                                    <label class="control-label">Bairro</label>
+                                    <input class="form-control form__input" name="bairro" ng-model="items.data.Endereco.Bairro" placeholder="Bairro" required maxlength="35" />
+                                </div>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': campoInvalido('estado') }">
+                                    <label class="control-label estado">Estado</label>
+                                    <select class="form-control combo__estado" required name="estado" ng-model="items.data.Endereco.Estado" ng-options="i.Sigla as i.Sigla for i in auxiliar.estado.data"></select>
+                                </div>
+                            </div>
+                            <div class="row row__cargo">
+                                <h5 class="subtitle">Dados profíssionais</h5>
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label estado">Departamento</label>
+                                    <select class="form-control combo__estado" name="setor" required placeholder="Departamento de trabalho" ng-model="items.data.Cargo.Departamento" ng-options="i.Nome as i.Nome for i in items.departamento"></select>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">Cargo</label>
+                                    <input class="form-control form__input" name="cargo" required ng-model="items.data.Cargo.Cargo" placeholder="Descrição do cargo" maxlength="90" />
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">Salário</label>
+                                    <input class="form-control form__input" name="salario" required ng-model="items.data.Cargo.Salario" placeholder="salário" maxlength="20" ui-money-mask />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">Data início</label>
+                                    <input class="form-control form__input" name="data_inicio" required mask="99/99/9999" ng-model="items.data.Cargo.DT_Inicio" placeholder="Data início" maxlength="20" />
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">Data fim contrato</label>
+                                    <input class="form-control form__input" name="data_fim" mask="99/99/9999" ng-model="items.data.Cargo.DT_Fim" placeholder="Data fim contrato" maxlength="20" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-16 bg-funcionario text-right">
+                    <input type="submit" class="btn btn-link button__add" value="Salvar" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

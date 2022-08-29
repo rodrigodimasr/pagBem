@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+}
+
+<div id="funcionario-detail">
+    <div class="space"></div>
+    <div class="p-h-32 p-v-16">
+        <form name="funcionarioForm" class="content funcionario__form" ng-submit="submit()">
+            <h1>Detalhe do funcionário</h1>
+            <div class="card p-8 funcionario__add__form_cad">
+                <div class="row">
+                    <div class="funcionario__form--content">
+                        <div>
+                            <div class="row">
+                                <div id="form" class="form-group col-sm-5">
+                                    <label class="">Nome</label>
+                                    <label class="form-control input-nome form__input" placeholder="Nome completo">{{items.data.Nome}}</label>
+                                </div>
+                                <div id="form" class="form-group col-sm-2">
+                                    <label>Nome Social</label>
+                                    <label class="form-control form__nome__social form__input" placeholder="Apelido">{{items.data.Apelido}}</label>
+                                </div>
+                                <div id="form" class="form-group col-sm-2">
+                                    <label class="control-label">CPF</label>
+                                    <label class="form-control form__input" placeholder="CPF">{{items.data.CPF | cpf}}</label>
+                                </div>
+                                <div id="form" class="form-group col-sm-2">
+                                    <label class="control-label">Registro Geral RG</label>
+                                    <label class="form-control form__nome__social form__input" placeholder="RG">{{items.data.RG}}</label>
+                                </div>
+                            </div>
+                            <div class="row form-dados">
+                                <div class="form-group col-sm-3">
+                                    <div class="input-group">
+                                        <span id="icon-padding-left" class="input-group-addon"><i class="material-icons">email</i></span>
+                                        <label id="row_2--email" class="form-control" name="email" placeholder="e-mail">{{items.data.Email}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <div class="input-group">
+                                        <span id="icon-padding-left" class="input-group-addon"></span>
+                                        <label class="form-control" name="data_nascimento" mask="99/99/9999" placeholder="Data nascimento">{{items.data.DT_Nascimento}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <div class="input-group">
+                                        <span id="icon-padding-left" class="input-group-addon"><i class="material-icons">phone_iphone</i></span>
+                                        <label class="form-control">{{items.data.Tipo_Cell}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label class="form-control" name="celularDDD" placeholder="DDD">{{items.data.DDD_Cell}}</label>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label class="form-control" name="celularNumero" placeholder="Número">{{items.data.Celular}}</label>
+                                </div>
+                            </div>
+                            <div class="row" ng-if="items.data.Telefone.length > 0">
+                                <h5 class="subtitle">Contatos adicíonais</h5>
+                                <div class="form-group col-sm-2">
+                                    <div class="input-group">
+                                        <span id="icon-padding-left" class="input-group-addon"><i class="material-icons">phone</i></span>
+                                        <label class="form-control">{{items.data.Tipo_Tell}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label class="form-control" name="telefoneDDD" placeholder="DDD">{{items.data.DDD_Tell}}</label>
+                                </div>
+                                <div class="form-group col-sm-2">
+                                    <label class="form-control" name="telefoneNumero" placeholder="Número">{{items.data.Telefone}}</label>
+                                </div>
+                            </div>
+
+                            <div class="row row__complementares">
+                                <h5 class="subtitle">Dados complementos</h5>
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">CEP</label>
+                                    <div class="input-group">
+                                        <label class="form-control form__input" name="cep" placeholder="CEP">{{items.data.Endereco.Cep}}</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': campoInvalido('endereco') }">
+                                    <label class="control-label">Endereço</label>
+                                    <label class="form-control form__input" name="endereco" placeholder="Endereço">{{items.data.Endereco.Endereco}}</label>
+                                </div>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': campoInvalido('numero') }">
+                                    <label class="control-label">Número</label>
+                                    <label class="form-control form__input" name="numero" placeholder="Número" maxlength="10">{{items.data.Endereco.Numero}}</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">Complemento</label>
+                                    <label class="form-control form__input" name="complemento" placeholder="Complemento">{{items.data.Endereco.Complemento}}</label>
+                                </div>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': campoInvalido('bairro') }">
+                                    <label class="control-label">Bairro</label>
+                                    <label class="form-control form__input" name="bairro" ng-model="items.data.Endereco.Bairro" placeholder="Bairro" maxlength="35">{{items.data.Endereco.Bairro}}</label>
+                                </div>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': campoInvalido('estado') }">
+                                    <label class="control-label estado">Estado</label>
+                                    <label class="form-control combo__estado" required name="estado">{{items.data.Endereco.Estado}}</label>
+                                </div>
+                            </div>
+                            <div class="row row__cargo">
+                                <h5 class="subtitle">Dados profíssionais</h5>
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label estado">Departamento</label>
+                                    <label class="form-control combo__estado" name="setor" required placeholder="Departamento de trabalho">{{items.data.Cargo.Departamento}}</label>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">Cargo</label>
+                                    <label class="form-control form__input" name="cargo" placeholder="Descrição do cargo">{{items.data.Cargo.Cargo}}</label>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">Salário</label>
+                                    <label class="form-control form__input" name="salario" placeholder="salário">{{items.data.Cargo.Salario | currency}}</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">Data início</label>
+                                    <label class="form-control form__input" name="data_inicio" placeholder="Data início">{{items.data.Cargo.DT_Inicio}}</label>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="control-label">Data fim contrato</label>
+                                    <label class="form-control form__input" name="data_fim" placeholder="Data fim contrato">{{items.data.Cargo.DT_Fim}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-16 bg-funcionario text-right">
+                    <input type="submit" class="btn btn-link text-white" ui-sref="state-funcionario-edit({'id': '{{items.data.Codigo}}'})" value="Editar" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

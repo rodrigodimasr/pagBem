@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html ng-app="fiap" lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Dimas Games</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @*<link href="~/content/css/angular-material.css" rel="stylesheet" />*@
+    <link href="~/content/css/angular-toast.min.css" rel="stylesheet" />
+    @*<link href="~/content/css/angular-material.min.css" rel="stylesheet" />*@
+
+
+
+    <link href="~/content/css/bootstrap.paper.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/content/css/bootstrap.grid.custom.min.css" rel="stylesheet" />
+    <link href="~/content/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/content/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link href="~/content/css/angular-select2.css" rel="stylesheet" />
+    <link href="~/content/css/Dev.css" rel="stylesheet" />
+    <link href="~/content/css/responsive.css" rel="stylesheet" />
+    <link href="~/content/css/funcionario.css" rel="stylesheet" type="text/css" />
+    <link href="~/content/css/material-icons.css" rel="stylesheet" />
+
+
+    <base href="/" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="state-home" href="#">Home</a></li>
+                    <li><a ui-sref="state-funcionario" href="#">funcionario</a></li>
+                    @*<li>@Html.ActionLink("Sobre", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contato", "Contact", "Home")</li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    <script src="~/content/js/jquery-1.10.2.min.js"></script>
+    <script src="~/content/js/jquery-ui.min.js"></script>
+    <script src="~/content/js/angularjs/angular.js"></script>
+    <script src="~/content/js/angularjs/angular-loader.min.js"></script>
+    <script src="~/content/js/angularjs/angular-translate.js"></script>
+    <script src="~/content/js/angularjs/angular-animate.js"></script>
+    <script src="~/content/js/angularjs/angular-input-masks.js"></script>
+    <script src="~/content/js/angularjs/angular-material.js"></script>
+
+
+    <script src="~/content/js/angularjs/angular.min.1.5.0.js"></script>
+    <script src="~/Content/js/angular-sanitize.js"></script>
+    <script src="~/Content/js/angularjs/angular-route.min.js"></script>
+    <script src="~/Content/js/angularjs/angular-animate.min.js"></script>
+    <script src="~/content/js/angularjs/angular-ui-router.min.js"></script>
+    <script src="~/content/js/angularjs/angular-locate_pt-br.min.js"></script>
+    <script src="~/content/js/angularjs/angular-input-masks-standalone.min.js"></script>
+    <script src="~/content/js/angularjs/ngMask.min.js"></script>
+    <script src="~/Content/js/mask.min.js"></script>
+    <script src="~/content/js/angularjs/ui-bootstrap-tpls-1.2.5.min.js"></script>
+    <script src="~/Content/js/angularjs/angular-toastr.tpls.min.js"></script>
+    <script src="~/Content/js/angularjs/angular-confirm.min.js"></script>
+    <script src="~/Content/js/angularjs/angular-alert.min.js"></script>
+    <script src="~/Content/js/angularjs/angular-filter.min.js"></script>
+    <script src="~/content/js/bootstrap.min.js"></script>
+    <script src="~/content/js/highcharts/highcharts.js"></script>
+    <script src="~/content/js/angularjs/ng-infinite-scroll.min.js"></script>
+    <script src="~/content/js/angularjs/ng-file-upload-shim.min.js"></script>
+    <script src="~/content/js/angularjs/ng-file-upload.min.js"></script>
+    <script src="~/content/js/select2.js"></script>
+    <script src="~/content/js/angularjs/angular-select2.js"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+    <script src="~/content/js/ngclipboard.min.js"></script>
+    <script src="~/content/js/angular-dragdrop.min.js"></script>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @Scripts.Render("~/bundles/app/core")
+    @Scripts.Render("~/bundles/app/controllers")
+    @Scripts.Render("~/bundles/app/services")
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

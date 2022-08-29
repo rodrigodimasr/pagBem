@@ -1,0 +1,138 @@
+﻿
+/* Inicio tela de fiap*/
+.funcionario__form {
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin-top: 68px;
+    padding: 15px 56px;
+    min-height: 480px;
+}
+
+.funcionario, h1 {
+    text-align: center;
+}
+
+.funcionario__form--content {
+}
+
+/* Form row 1*/
+#form {
+    height: 10px;
+}
+
+.form__input {
+    max-height: 24px;
+}
+
+.input-nome {
+    min-width: 421px;
+}
+
+.form__nome__social {
+    min-width: 100px;
+}
+
+/* Form row 2 */
+
+.subtitle {
+    padding: 15px;
+}
+
+.form-dados {
+    padding-top: 53px;
+}
+
+#icon-padding-left {
+    padding-left: 0px;
+}
+
+#row_2--email {
+    /*min-width: 356px;*/
+    min-width: 209px;
+}
+
+/* row complemento */
+.row__complementares {
+    padding-top: 30px;
+}
+
+.estado {
+    margin: 0;
+    padding: 0;
+}
+
+.combo__estado {
+    height: 30px;
+}
+
+.button__add {
+    display: flex;
+    border: 1px solid;
+    width: 106px;
+    text-align: center;
+    padding: 0px 0 0 23px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-left: -18px;
+    color: white;
+    background: #2a2525;
+    height: 38px;
+    font-size: 16px;
+}
+
+.button__add--index {
+    display: flex;
+    border: 1px solid;
+    width: 106px;
+    text-align: center;
+    padding: 0px 0 0 5px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-left: 17px;
+    color: white;
+    background: #2a2525;
+    height: 38px;
+    font-size: 16px;
+}
+
+.button__add--update {
+    display: flex;
+    border: 1px solid;
+    width: 106px;
+    text-align: center;
+    padding: 0px 0 0 9px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-left: -18px;
+    color: white;
+    background: #2a2525;
+    height: 38px;
+    font-size: 16px;
+}
+
+.button--delete {
+    display: flex;
+    border: 1px solid;
+    width: 84px;
+    text-align: center;
+    padding: 0px 0 0 9px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-left: 11px;
+    color: white;
+    background: #d13838;
+    height: 38px;
+    font-size: 16px;
+}
+
+.edit__botoes {
+    display: inline-flex;
+}

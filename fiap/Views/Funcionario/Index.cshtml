@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div id="funcionario-content">
+    <div class="space"></div>
+
+    <div class="p-h-32">
+        <form class="list funcionario__form" ng-submit="refresh()">
+            <h1>
+                Todos os funcionários
+                <span class="pull-right">
+                </span>
+            </h1>
+
+            <div class="card p-8">
+                <div class="loading" ng-show="state.carregando">
+                    <i class="material-icons md-32 spin">data_usage</i>
+                </div>
+                <div class="loading-no-data" ng-show="state.vazio">
+                    Nenhum funcionario encontrado
+                </div>
+                <div class="table-responsive" ng-show="!state.carregando && !state.vazio">
+                    <table class="table table-condensed m-0">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nome</th>
+                                <th>Celular</th>
+                                <th>E-mail</th>
+                                <th>CPF</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in state.data | orderBy: 'Nome'">
+                                <td>{{$index + 1}}</td>
+                                <td>
+                                    <a href="" ui-sref="state-funcionario-detail({'id': '{{item.Codigo}}'})">
+                                        <div class="media">
+                                            <div>
+                                                {{item.Nome}}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <span>{{item.Celular}}</span>
+                                </td>
+                                <td>
+                                    {{item.Email}}
+                                </td>
+                                <td>
+                                    <span>{{item.CPF | cpf}}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="row">
+        <input type="submit" class="btn btn-link button__add--index" ui-sref="state-funcionario-add" title="Novo funcionario..." value="Cadastrar" />
+    </div>
+</div>
